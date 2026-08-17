@@ -13,8 +13,9 @@ export default async function handler(req,res){
     const token=(req.headers.authorization||'').replace(/^Bearer\s+/i,'');
     if(!token)return json(res,401,{error:'Sign in required'});
     const supabaseUrl=process.env.VITE_SUPABASE_URL;
-    const supabaseKey=process.env.VITE_SUPABASE_ANON_KEY;
+    const supabaseKey=process.env.VITE_SUPABASE_PUBLISHABLE_KEY||process.env.VITE_SUPABASE_ANON_KEY;
     const openaiKey=process.env.OPENAI_API_KEY;
+    if(!supabaseUrl||!supabaseKey)return json(res,503,{error:'Wild Recap needs the Supabase URL and publishable key in Vercel.'});
     if(!openaiKey)return json(res,503,{error:'Wild Recap needs OPENAI_API_KEY in Vercel.'});
     const auth=await fetch(`${supabaseUrl}/auth/v1/user`,{headers:{apikey:supabaseKey,Authorization:`Bearer ${token}`}});
     if(!auth.ok)return json(res,401,{error:'Invalid Wild60 session'});
