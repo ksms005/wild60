@@ -2,6 +2,7 @@ import React,{useEffect,useMemo,useRef,useState}from'react';
 import{Camera,LoaderCircle,Minus,Plus,X}from'lucide-react';
 import{supabase}from'./supabase';
 import'./profile-avatar.css';
+import'./shell.css';
 
 const PREVIEW=320;
 const OUTPUT=720;
