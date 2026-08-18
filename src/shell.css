@@ -1,30 +1,19 @@
-/* Wild60 shell + commitments hierarchy */
-nav .navParent{margin-top:1px}
-nav .navParent.active{background:#222;color:#fff}
-.navChildren{display:grid;gap:3px;margin:-3px 0 4px 28px;padding-left:12px;border-left:1px solid #333}
-.navChildren button{padding:8px 10px;font-size:12px;color:#858585}
-.navChildren button svg{width:15px;height:15px}
-.navChildren button.active,.navChildren button:hover{background:#1b1b1b;color:#fff}
+/* Wild60 focused meeting shell */
+main > .grid{display:none!important}
+.runner:has(.agenda button:nth-of-type(4).now) ~ .grid{display:grid!important;grid-template-columns:1fr 1fr!important;gap:18px!important}
+.runner:has(.agenda button:nth-of-type(4).now) ~ .grid > .card:nth-child(3){display:none!important}
+.runner:has(.agenda button:nth-of-type(4).now) ~ .grid > .card{box-shadow:0 8px 30px #0000000d;border:1px solid #ebe7e1}
 
-.commitmentsWorkspace{background:#fff;border-radius:14px;padding:30px;box-shadow:0 8px 30px #0000000d;margin-top:20px}
-.commitmentsWorkspace.standalone{margin-top:0;min-height:500px}
-.commitmentsHead{display:flex;justify-content:space-between;gap:24px;align-items:flex-start;margin-bottom:22px}
-.commitmentsHead h2{font-size:44px}
-.commitmentsHead p{color:#777;font-size:13px;margin:7px 0 0}
-.commitmentStats{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
-.commitmentStat{background:#111;color:#fff;border-radius:10px;padding:11px 14px;min-width:94px}
-.commitmentStat span{display:block;color:#888;font-size:8px;font-weight:900;letter-spacing:1px;margin-bottom:4px}
-.commitmentStat b{font-family:'Barlow Condensed';font-size:25px}
-.commitmentStat.pink b{color:#ff2f8b}
-.commitmentColumns{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.commitmentColumn{border:1px solid #ece8e2;border-radius:12px;padding:18px;min-width:0}
-.commitmentColumnHead{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #eee;padding-bottom:13px;margin-bottom:6px}
-.commitmentColumnHead h3{display:flex;align-items:center;gap:8px;font-size:24px}
-.commitmentColumnHead h3 svg{width:18px;color:#ff2f8b}
-.commitmentColumnHead button{border:0;background:#111;color:#fff;border-radius:7px;padding:8px 10px;font-size:9px;font-weight:900;display:flex;align-items:center;gap:5px;cursor:pointer}
-.commitmentColumnHead button svg{width:13px}
-.commitmentsWorkspace .accountItem{box-shadow:none}
-.commitmentsWorkspace .itemList{margin-top:8px}
-.commitmentsWorkspace.meetingCommitments{margin-top:20px}
+/* Product language */
+nav button:nth-child(4){font-size:0}
+nav button:nth-child(4) svg{font-size:initial}
+nav button:nth-child(4):after{content:'Vital Signs';font-size:13px;font-weight:700}
 
-@media(max-width:950px){.commitmentColumns{grid-template-columns:1fr}.commitmentsHead{display:block}.commitmentStats{justify-content:flex-start;margin-top:16px}}
+/* Rocks + To-Dos read as one Commitments family in navigation. */
+nav button:nth-child(5){margin-top:13px;position:relative}
+nav button:nth-child(5):before{content:'COMMITMENTS';position:absolute;left:0;top:-16px;color:#666;font-size:8px;letter-spacing:1.4px;font-weight:900}
+nav button:nth-child(5),nav button:nth-child(6){margin-left:14px;width:calc(100% - 14px);padding-left:12px;border-left:1px solid #333;border-radius:0 8px 8px 0}
+nav button:nth-child(5).active,nav button:nth-child(6).active{border-left-color:#ff2f8b}
+
+.commitmentsWorkspace{background:#fff;border-radius:14px;padding:30px;box-shadow:0 8px 30px #0000000d;margin-top:20px}.commitmentsWorkspace.standalone{margin-top:0;min-height:500px}.commitmentsHead{display:flex;justify-content:space-between;gap:24px;align-items:flex-start;margin-bottom:22px}.commitmentsHead h2{font-size:44px}.commitmentsHead p{color:#777;font-size:13px;margin:7px 0 0}.commitmentStats{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.commitmentStat{background:#111;color:#fff;border-radius:10px;padding:11px 14px;min-width:94px}.commitmentStat span{display:block;color:#888;font-size:8px;font-weight:900;letter-spacing:1px;margin-bottom:4px}.commitmentStat b{font-family:'Barlow Condensed';font-size:25px}.commitmentStat.pink b{color:#ff2f8b}.commitmentColumns{display:grid;grid-template-columns:1fr 1fr;gap:18px}.commitmentColumn{border:1px solid #ece8e2;border-radius:12px;padding:18px;min-width:0}.commitmentColumnHead{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #eee;padding-bottom:13px;margin-bottom:6px}.commitmentColumnHead h3{display:flex;align-items:center;gap:8px;font-size:24px}.commitmentColumnHead h3 svg{width:18px;color:#ff2f8b}.commitmentColumnHead button{border:0;background:#111;color:#fff;border-radius:7px;padding:8px 10px;font-size:9px;font-weight:900;display:flex;align-items:center;gap:5px;cursor:pointer}.commitmentColumnHead button svg{width:13px}.commitmentsWorkspace .accountItem{box-shadow:none}.commitmentsWorkspace .itemList{margin-top:8px}.commitmentsWorkspace.meetingCommitments{margin-top:20px}
+@media(max-width:950px){.runner:has(.agenda button:nth-of-type(4).now) ~ .grid{grid-template-columns:1fr!important}.commitmentColumns{grid-template-columns:1fr}.commitmentsHead{display:block}.commitmentStats{justify-content:flex-start;margin-top:16px}}
