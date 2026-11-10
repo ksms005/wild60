@@ -19,3 +19,5 @@
 .rockMilestoneAdd>input[type=text]{flex:1 1 auto;min-width:0;width:auto;max-width:none;padding:11px 12px}
 .rockMilestoneAdd>.primary{flex:0 0 auto;white-space:nowrap}
 @media(max-width:650px){.rockMilestoneAdd{flex-wrap:wrap}.rockMilestoneAdd>.primary{width:100%}.rockMilestoneRow{padding:10px 8px;gap:9px}}
+
+.milestoneAssignment{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-top:8px}.milestoneAssignment select,.milestoneAssignment input{max-width:170px;border:1px solid #ddd;border-radius:6px;padding:7px;font-size:11px;background:#fff}.milestoneAssignment .miniAction{padding:8px 10px}.rockMilestoneText>span.completed{text-decoration:line-through;color:#888}
