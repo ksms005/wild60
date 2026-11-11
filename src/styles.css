@@ -22,34 +22,20 @@
 
 .milestoneAssignment{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-top:8px}.milestoneAssignment select,.milestoneAssignment input{max-width:170px;border:1px solid #ddd;border-radius:6px;padding:7px;font-size:11px;background:#fff}.milestoneAssignment .miniAction{padding:8px 10px}.rockMilestoneText>span.completed{text-decoration:line-through;color:#888}
 
-/* WILD grouped navigation and personal dashboard */
-nav .navGroup{display:flex;flex-direction:column;gap:3px;margin:0 0 15px}
-nav .navGroupTitle{display:block;padding:11px 12px 5px;font-size:10px;letter-spacing:.14em;font-weight:800;color:#9295a2}
 .dashboardTiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:20px 0}
 .dashboardTile{display:flex;flex-direction:column;align-items:flex-start;gap:12px;text-align:left;border:1px solid #dedfe5;border-radius:15px;background:#fff;color:#20212b;padding:22px;cursor:pointer}
 .dashboardTile span{font-size:13px;font-weight:700;color:#606575}.dashboardTile strong{font-size:38px;line-height:1}.dashboardTile small{color:#d92778;font-weight:700}
 .dashboardPanels{display:grid;grid-template-columns:2fr 1fr;gap:16px}.dashboardPanel{background:#fff;border:1px solid #dedfe5;border-radius:15px;padding:22px;display:flex;flex-direction:column;gap:12px}.dashboardPanel h3{margin:0 0 8px;font-size:14px;letter-spacing:.05em}.dashboardPanel>button{padding:10px 0;background:transparent;border:0;border-bottom:1px solid #e7e8eb;text-align:left;cursor:pointer;font-weight:700;color:#cf2774}.dashboardItem{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #ededf0;align-items:center}.dashboardItem b{font-size:10px;color:#b91c65;min-width:50px}.dashboardItem span{font-size:14px}
 @media(max-width:800px){.dashboardTiles{grid-template-columns:1fr}.dashboardPanels{grid-template-columns:1fr}}
 
-/* Sidebar layout repair: legacy nav grid caused group overlap and phantom labels. */
-.app>aside>nav{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;margin-top:22px!important;grid-template-columns:none!important}
-.app>aside>nav>.navGroup{display:flex!important;flex-direction:column!important;align-items:stretch!important;flex:none!important;min-width:0!important;gap:3px!important;margin:0 0 12px!important}
-.app>aside>nav>.navGroup>.navGroupTitle{position:static!important;display:block!important;flex:none!important;margin:0!important;padding:9px 12px 5px!important;font-size:10px!important;line-height:1.3!important;letter-spacing:.12em!important;color:#9295a2!important}
-.app>aside>nav>.navGroup>button{display:flex!important;flex:none!important;width:100%!important;min-height:40px!important;box-sizing:border-box!important;align-items:center!important;position:relative!important;margin:0!important;padding:9px 12px!important;white-space:normal!important;line-height:1.35!important}
-.app>aside>nav>.navGroup>button svg{flex-shrink:0!important}
-.app>main{align-self:start!important;margin:0 auto!important;min-width:0!important}
-@media(max-width:1100px){.app>aside>nav{display:flex!important;flex-direction:column!important}.app>aside{min-height:auto}}
 
-/* Navigation labels are isolated elements, not adjacent React text nodes. */
-.app>aside>nav .navLabel{display:inline-block!important;position:static!important;flex:1!important;min-width:0!important;overflow:visible!important;white-space:normal!important;text-transform:none!important;font-size:inherit!important;line-height:1.35!important}
-.app>aside>nav .navGroupTitle{pointer-events:none!important;white-space:nowrap!important}
-
-/* Deterministic sidebar labels for three controls affected by browser DOM text replacement. */
-.app>aside>nav button[data-nav="nav-history"] .navLabel,
-.app>aside>nav button[data-nav="nav-pressure"] .navLabel,
-.app>aside>nav button[data-nav="nav-scorecard"] .navLabel{font-size:0!important;line-height:0!important;position:relative!important;display:block!important;overflow:hidden!important}
-.app>aside>nav button[data-nav="nav-history"] .navLabel::after{content:"Meeting History"}
-.app>aside>nav button[data-nav="nav-pressure"] .navLabel::after{content:"Pressure Points"}
-.app>aside>nav button[data-nav="nav-scorecard"] .navLabel::after{content:"Vital Signs"}
-.app>aside>nav button[data-nav] .navLabel::after{display:block;font-size:12px;line-height:18px;font-weight:700;white-space:nowrap;color:inherit}
-.app>aside>nav button[data-nav]{justify-content:flex-start!important;gap:11px!important}
+/* Independent Wild sidebar: no legacy nav-group or pseudo-element label overrides. */
+.app>aside>.wildSidebarNav{display:flex;flex-direction:column;align-items:stretch;gap:0;margin-top:22px}
+.wildSidebarGroup{display:flex;flex-direction:column;gap:3px;margin:0 0 13px;min-width:0}
+.wildSidebarHeading{font-size:10px;font-weight:800;letter-spacing:.12em;color:#9295a2;padding:10px 12px 6px;line-height:1.3}
+.app>aside>.wildSidebarNav .wildSidebarLink{display:flex;align-items:center;justify-content:flex-start;gap:11px;width:100%;min-height:40px;padding:9px 12px;border:0;border-radius:8px;background:transparent;color:#aaa;text-align:left;font-weight:700;cursor:pointer;box-sizing:border-box;line-height:1.35}
+.app>aside>.wildSidebarNav .wildSidebarLink.active,.app>aside>.wildSidebarNav .wildSidebarLink:hover{background:#222;color:#fff}
+.wildSidebarLink svg{flex:0 0 18px}
+.wildSidebarLabel{display:block;flex:1;min-width:0;white-space:normal;font-size:12px;line-height:1.35}
+.app>main{align-self:start;margin:0 auto;min-width:0}
+@media(max-width:1100px){.app>aside>.wildSidebarNav{display:flex;flex-direction:column}}
