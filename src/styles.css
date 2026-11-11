@@ -143,3 +143,9 @@
 .rockHealth-executing,.rockHealth-locked_in{color:#22C55E}
 .rockHealth-drifting{color:#EAB308}
 .rockHealth-dropped{color:#EF4444}
+
+/* Meeting ratings: decimal input and previous-score context */
+.ratingRow .meetingRatingInput{width:92px;max-width:100%;padding:9px 11px;border:1px solid #d9d9e1;border-radius:8px;font-size:16px;font-weight:800;text-align:center;background:#fff;color:#1d1d23}
+.ratingRow .meetingRatingInput:focus{outline:2px solid #f42d86;outline-offset:1px}
+.ratingRow label>span{font-size:12px;font-weight:700;color:#777}
+.commandMomentumGrid .commandPreviousRating{display:block;margin-top:-4px;font-size:11px;line-height:1.4;color:#777b86;font-weight:650}
