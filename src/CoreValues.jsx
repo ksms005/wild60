@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react';
-import supabase from './supabase';
+import {supabase} from './supabase';
 export default function CoreValues({company,canManage}){
  const [record,setRecord]=useState(null),[loading,setLoading]=useState(true),[editing,setEditing]=useState(false),[draft,setDraft]=useState([]),[headline,setHeadline]=useState(''),[saving,setSaving]=useState(false);
  useEffect(()=>{let live=true;setLoading(true);setEditing(false);supabase.from('company_core_values').select('*').eq('company_id',company.id).maybeSingle().then(({data,error})=>{if(!live)return;if(error)console.error(error);setRecord(data);setDraft(data?.values||[]);setHeadline(data?.headline||'');setLoading(false)});return()=>{live=false}},[company.id]);
