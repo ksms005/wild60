@@ -137,3 +137,9 @@
 .myWorkInlineEdit button{border:0;border-radius:6px;padding:9px 12px;background:#111;color:#fff;font-size:11px;font-weight:800;cursor:pointer}
 .myWorkInlineEdit button[type="submit"]{background:#f32b85}
 .myWorkInlineEdit button:disabled{opacity:.5;cursor:wait}
+
+/* Rock health uses the same green / yellow / red scale as meeting trends. */
+.rockHealth{display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-size:11px;font-weight:800;line-height:1.4}
+.rockHealth-executing,.rockHealth-locked_in{color:#22C55E}
+.rockHealth-drifting{color:#EAB308}
+.rockHealth-dropped{color:#EF4444}
