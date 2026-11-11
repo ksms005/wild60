@@ -5,7 +5,7 @@ const GROUPS=[
   {title:'MY WORKSPACE',items:[['dashboard','My Dashboard',BarChart3],['mywork','My Work',ClipboardCheck]]},
   {title:'MEET & CONNECT',items:[['meetingPicker','Meetings',Flame],['pulse','Wild Pulse',HeartPulse],['history','Meeting History',History]]},
   {title:'EXECUTION',items:[['rocks','Rocks',Target],['todos','To-Dos',ClipboardCheck],['pressure','Pressure Points',AlertTriangle],['scorecard','Vital Signs',HeartPulse]]},
-  {title:'ORGANIZATION',items:[['org','Org Chart',Users],['team','People & Access',Users]]},
+  {title:'ORGANIZATION',items:[['org','Org Chart',Users],['team','People & Access',Users],['values','Core Values',Target]]},
   {title:'ADMINISTRATION',items:[['activity','Activity History',History],['company','Company Settings',Building2]]}
 ];
 export default function WildSidebar({tab,onNavigate,canViewAudit,canManageTeam}){
