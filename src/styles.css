@@ -172,3 +172,14 @@
 .meetingRatingStepper small{font-size:11px;color:#8a8a8a;font-weight:700}
 .meetingPersonAverage{font-size:11px;font-weight:800;color:#444}
 @media(max-width:900px){.energyStyleRatingList{grid-template-columns:1fr}}
+
+/* Clear identification for each WILD60 rater; energy-style rating cards */
+.energyStyleRatingRow .meetingRatingIdentity{display:flex;align-items:center;gap:11px;flex:1 1 100%;min-width:0}
+.energyStyleRatingRow .meetingRatingIdentity b{font-family:'Barlow Condensed',sans-serif;font-size:21px;font-weight:800;text-transform:uppercase;color:#181818!important;line-height:1.2}
+.energyStyleRatingRow .meetingRatingIdentity img{flex-shrink:0}
+.energyStyleRatingRow .meetingRatingControls{flex:1 1 100%;justify-content:flex-start}
+.energyStyleRatingRow .meetingRatingGroup>span{color:#646464}
+.energyStyleRatingRow .meetingRatingGroup label{color:#333}
+.commandMomentumGrid{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:1000px){.commandMomentumGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:540px){.commandMomentumGrid{grid-template-columns:1fr}}
