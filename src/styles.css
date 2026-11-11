@@ -30,3 +30,12 @@ nav .navGroupTitle{display:block;padding:11px 12px 5px;font-size:10px;letter-spa
 .dashboardTile span{font-size:13px;font-weight:700;color:#606575}.dashboardTile strong{font-size:38px;line-height:1}.dashboardTile small{color:#d92778;font-weight:700}
 .dashboardPanels{display:grid;grid-template-columns:2fr 1fr;gap:16px}.dashboardPanel{background:#fff;border:1px solid #dedfe5;border-radius:15px;padding:22px;display:flex;flex-direction:column;gap:12px}.dashboardPanel h3{margin:0 0 8px;font-size:14px;letter-spacing:.05em}.dashboardPanel>button{padding:10px 0;background:transparent;border:0;border-bottom:1px solid #e7e8eb;text-align:left;cursor:pointer;font-weight:700;color:#cf2774}.dashboardItem{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #ededf0;align-items:center}.dashboardItem b{font-size:10px;color:#b91c65;min-width:50px}.dashboardItem span{font-size:14px}
 @media(max-width:800px){.dashboardTiles{grid-template-columns:1fr}.dashboardPanels{grid-template-columns:1fr}}
+
+/* Sidebar layout repair: legacy nav grid caused group overlap and phantom labels. */
+.app>aside>nav{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;margin-top:22px!important;grid-template-columns:none!important}
+.app>aside>nav>.navGroup{display:flex!important;flex-direction:column!important;align-items:stretch!important;flex:none!important;min-width:0!important;gap:3px!important;margin:0 0 12px!important}
+.app>aside>nav>.navGroup>.navGroupTitle{position:static!important;display:block!important;flex:none!important;margin:0!important;padding:9px 12px 5px!important;font-size:10px!important;line-height:1.3!important;letter-spacing:.12em!important;color:#9295a2!important}
+.app>aside>nav>.navGroup>button{display:flex!important;flex:none!important;width:100%!important;min-height:40px!important;box-sizing:border-box!important;align-items:center!important;position:relative!important;margin:0!important;padding:9px 12px!important;white-space:normal!important;line-height:1.35!important}
+.app>aside>nav>.navGroup>button svg{flex-shrink:0!important}
+.app>main{align-self:start!important;margin:0 auto!important;min-width:0!important}
+@media(max-width:1100px){.app>aside>nav{display:flex!important;flex-direction:column!important}.app>aside{min-height:auto}}
