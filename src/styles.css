@@ -122,3 +122,18 @@
 .commandMomentumGrid>button>span{font-size:12px;color:#777b86}
 .commandFinePrint{font-size:10px;color:#9a9ca4;margin:12px 0 0}
 @media(max-width:800px){.commandColumns{grid-template-columns:1fr}.commandMomentumGrid{grid-template-columns:1fr}.commandTiles .dashboardTile{min-height:125px}}
+
+/* Deadline and inline editing refinements */
+.commandAttentionType{display:block;font-size:10px;font-style:normal;font-weight:500;color:#90929c;margin-top:4px}
+.commandListItem .commandLate,.commandLate,.myWorkLate{color:#d63352!important;font-weight:800}
+.commandListItem .commandSoon,.commandSoon,.myWorkDueSoon{color:#b77917!important;font-weight:800}
+.commandEyebrow .commandLate,.commandEyebrow .commandSoon{margin-left:8px;font-size:10px;letter-spacing:0}
+.myWorkRockName{display:block;width:100%;border:0;background:transparent;text-align:left;padding:0;font-size:14px;font-weight:800;color:#17171a;cursor:pointer}
+.myWorkRockName:hover,.myWorkEditLink:hover{text-decoration:underline}
+.myWorkEditLink{margin-left:auto;background:transparent;border:0;color:#ed2781;font-size:11px;font-weight:800;cursor:pointer;padding:8px}
+.myWorkInlineEdit{display:flex;align-items:flex-end;gap:8px;flex-wrap:wrap;margin:12px 0;padding:12px;border:1px solid #ece6e9;border-radius:9px;background:#faf9fa}
+.myWorkInlineEdit label{display:flex;flex-direction:column;gap:5px;color:#666;font-size:10px;font-weight:750}
+.myWorkInlineEdit input{min-width:140px;max-width:240px;padding:8px 10px;border:1px solid #dedee3;border-radius:6px;background:#fff;font:inherit;color:#111}
+.myWorkInlineEdit button{border:0;border-radius:6px;padding:9px 12px;background:#111;color:#fff;font-size:11px;font-weight:800;cursor:pointer}
+.myWorkInlineEdit button[type="submit"]{background:#f32b85}
+.myWorkInlineEdit button:disabled{opacity:.5;cursor:wait}
