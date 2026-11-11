@@ -46,3 +46,9 @@
 .app>aside .wildSidebarNav *::after{box-sizing:border-box}
 .app>aside .wildSidebarNav *::before,
 .app>aside .wildSidebarNav *::after{content:none!important;display:none!important}
+
+/* Consistent left alignment for every sidebar item, including Vital Signs. */
+.app>aside>.wildSidebarNav .wildSidebarGroup{width:100%;align-items:stretch;margin-left:0!important;padding-left:0!important}
+.app>aside>.wildSidebarNav .wildSidebarLink{display:grid!important;grid-template-columns:18px minmax(0,1fr)!important;column-gap:11px!important;justify-content:initial!important;justify-items:start!important;align-items:center!important;text-align:left!important;margin:0!important;padding:10px 12px!important;min-height:42px!important;width:100%!important;max-width:100%!important;white-space:normal!important}
+.app>aside>.wildSidebarNav .wildSidebarLink>svg{grid-column:1!important;grid-row:1!important;display:block!important;width:18px!important;height:18px!important;margin:0!important;padding:0!important;justify-self:start!important;align-self:center!important;flex:none!important}
+.app>aside>.wildSidebarNav .wildSidebarLink>.wildSidebarLabel{grid-column:2!important;grid-row:1!important;display:block!important;width:auto!important;margin:0!important;padding:0!important;text-align:left!important;justify-self:start!important;align-self:center!important;flex:none!important;font-size:12px!important;line-height:1.35!important}
