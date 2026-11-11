@@ -52,3 +52,36 @@
 .app>aside>.wildSidebarNav .wildSidebarLink{display:grid!important;grid-template-columns:18px minmax(0,1fr)!important;column-gap:11px!important;justify-content:initial!important;justify-items:start!important;align-items:center!important;text-align:left!important;margin:0!important;padding:10px 12px!important;min-height:42px!important;width:100%!important;max-width:100%!important;white-space:normal!important}
 .app>aside>.wildSidebarNav .wildSidebarLink>svg{grid-column:1!important;grid-row:1!important;display:block!important;width:18px!important;height:18px!important;margin:0!important;padding:0!important;justify-self:start!important;align-self:center!important;flex:none!important}
 .app>aside>.wildSidebarNav .wildSidebarLink>.wildSidebarLabel{grid-column:2!important;grid-row:1!important;display:block!important;width:auto!important;margin:0!important;padding:0!important;text-align:left!important;justify-self:start!important;align-self:center!important;flex:none!important;font-size:12px!important;line-height:1.35!important}
+
+/* My Work: personal execution workspace */
+.myWorkPage .workspaceHead{margin-bottom:20px}
+.myWorkStats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:22px 0}
+.myWorkStats>div{border:1px solid #e1e2e7;border-radius:13px;background:#fff;padding:19px;display:flex;flex-direction:column;gap:7px;color:#626677}
+.myWorkStats strong{font-size:32px;line-height:1.1;color:#20222b}.myWorkStats span{font-size:12px;font-weight:750}
+.myWorkSections{display:grid;gap:16px}
+.myWorkSection{border:1px solid #e3e4e8;border-radius:14px;padding:20px;background:#fff}
+.myWorkSectionHead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.myWorkSectionHead h3{font-family:'Barlow Condensed',sans-serif;font-size:19px;letter-spacing:.04em;margin:0}
+.myWorkSectionHead>span{font-size:12px;font-weight:750;color:#777}
+.myWorkRock{padding:16px;border:1px solid #e5e5e9;border-radius:11px;margin-top:10px;display:flex;flex-direction:column;gap:12px}
+.myWorkRock>strong{font-size:16px}
+.myWorkRockTop,.myWorkRockControls{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.myWorkRockTop>span{font-size:10px;font-weight:850;color:#ed2681;letter-spacing:.09em}
+.myWorkRockTop small{display:flex;align-items:center;gap:5px;color:#6b6d76}
+.myWorkRockControls label{font-size:12px;color:#777;font-weight:700}
+.myWorkRockControls select{margin-left:8px;border:1px solid #ddd;border-radius:7px;padding:7px}
+.myWorkRockControls button{border:0;background:transparent;color:#e22b7b;font-weight:800;cursor:pointer}
+.myWorkProgress{height:7px;background:#f0f0f3;border-radius:10px;overflow:hidden}
+.myWorkProgress>div{height:100%;background:#f72d88;border-radius:10px}
+.myWorkRock>small{font-size:11px;color:#777}
+.myWorkTask{display:flex;align-items:flex-start;gap:13px;padding:13px 0;border-top:1px solid #eee}
+.myWorkCheck{border:0;background:transparent;color:#f32d86;padding:2px;cursor:pointer}
+.myWorkCheck:disabled{opacity:.4;cursor:wait}
+.myWorkTaskInfo{display:flex;flex-direction:column;gap:5px;min-width:0}
+.myWorkTaskInfo strong{font-size:14px}.myWorkTaskInfo small{font-size:12px;color:#777}
+.myWorkLate{color:#cf245a!important;font-weight:800}
+.myWorkEmpty{display:flex;align-items:center;gap:10px;color:#737681;font-size:13px;background:#fafafa;border-radius:10px;padding:20px}
+.myWorkCompletedToggle{display:flex;align-items:center;gap:8px;border:0;background:transparent;font-weight:800;color:#656575;cursor:pointer}
+.myWorkCompleted{display:flex;align-items:center;gap:10px;padding:12px 0;border-top:1px solid #eee;color:#888}
+.myWorkCompleted span{text-decoration:line-through;flex:1}.myWorkCompleted small{font-size:11px}
+@media(max-width:700px){.myWorkStats{grid-template-columns:1fr}.myWorkSection{padding:14px}}
