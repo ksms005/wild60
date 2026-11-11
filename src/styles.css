@@ -157,3 +157,18 @@
 .historyRatingReasons{margin:15px 0;padding:14px 18px;background:#fff8fa;border:1px solid #f1d8e0;border-radius:10px}
 .historyRatingReasons>b{font-size:12px;letter-spacing:.03em}
 .historyRatingReasons p{margin:8px 0 0;font-size:13px;line-height:1.5;white-space:pre-wrap}
+
+/* Lock It In ratings mirror Energy Pulse's minus / numeric input / plus controls. */
+.energyStyleRatingList{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.energyStyleRatingRow{display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:17px;border:1px solid #e6e1de;border-radius:14px;background:#faf9f8}
+.energyStyleRatingRow>b{flex:1 1 140px;min-width:0}
+.meetingRatingControls{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.meetingRatingGroup{display:flex;flex-direction:column;gap:5px}
+.meetingRatingGroup>span{font-size:10px;font-weight:800;letter-spacing:.08em;color:#777}
+.meetingRatingStepper{display:flex;align-items:center;gap:3px}
+.meetingRatingStepper button{width:34px;height:40px;border:1px solid #dedede;border-radius:7px;background:#fff;font-size:21px;font-weight:800;cursor:pointer;color:#171717}
+.meetingRatingStepper input{width:61px;height:40px;border:1px solid #dedede;border-radius:7px;background:#fff;text-align:center;font-size:17px;font-weight:800;color:#171717;appearance:textfield;-moz-appearance:textfield}
+.meetingRatingStepper input::-webkit-outer-spin-button,.meetingRatingStepper input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.meetingRatingStepper small{font-size:11px;color:#8a8a8a;font-weight:700}
+.meetingPersonAverage{font-size:11px;font-weight:800;color:#444}
+@media(max-width:900px){.energyStyleRatingList{grid-template-columns:1fr}}
