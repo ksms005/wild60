@@ -39,3 +39,7 @@ nav .navGroupTitle{display:block;padding:11px 12px 5px;font-size:10px;letter-spa
 .app>aside>nav>.navGroup>button svg{flex-shrink:0!important}
 .app>main{align-self:start!important;margin:0 auto!important;min-width:0!important}
 @media(max-width:1100px){.app>aside>nav{display:flex!important;flex-direction:column!important}.app>aside{min-height:auto}}
+
+/* Navigation labels are isolated elements, not adjacent React text nodes. */
+.app>aside>nav .navLabel{display:inline-block!important;position:static!important;flex:1!important;min-width:0!important;overflow:visible!important;white-space:normal!important;text-transform:none!important;font-size:inherit!important;line-height:1.35!important}
+.app>aside>nav .navGroupTitle{pointer-events:none!important;white-space:nowrap!important}
