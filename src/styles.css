@@ -39,3 +39,10 @@
 .wildSidebarLabel{display:block;flex:1;min-width:0;white-space:normal;font-size:12px;line-height:1.35}
 .app>main{align-self:start;margin:0 auto;min-width:0}
 @media(max-width:1100px){.app>aside>.wildSidebarNav{display:flex;flex-direction:column}}
+
+/* Remove generated text inserted by competing sidebar pseudo-element rules. All labels/headings are real React nodes. */
+.app>aside .wildSidebarNav *,
+.app>aside .wildSidebarNav *::before,
+.app>aside .wildSidebarNav *::after{box-sizing:border-box}
+.app>aside .wildSidebarNav *::before,
+.app>aside .wildSidebarNav *::after{content:none!important;display:none!important}
