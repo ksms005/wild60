@@ -149,3 +149,11 @@
 .ratingRow .meetingRatingInput:focus{outline:2px solid #f42d86;outline-offset:1px}
 .ratingRow label>span{font-size:12px;font-weight:700;color:#777}
 .commandMomentumGrid .commandPreviousRating{display:block;margin-top:-4px;font-size:11px;line-height:1.4;color:#777b86;font-weight:650}
+
+.meetingRatingReason{display:flex;flex-direction:column;gap:7px;flex:1 1 100%;min-width:200px;margin-top:9px}
+.meetingRatingReason label{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:700}
+.meetingRatingReason textarea{width:100%;min-height:64px;padding:10px;border:1px solid #e5b6c5;border-radius:8px;background:#fff;font:inherit;color:#202027;resize:vertical}
+.meetingRatingReason textarea:focus{outline:2px solid #f32b85;outline-offset:1px}
+.historyRatingReasons{margin:15px 0;padding:14px 18px;background:#fff8fa;border:1px solid #f1d8e0;border-radius:10px}
+.historyRatingReasons>b{font-size:12px;letter-spacing:.03em}
+.historyRatingReasons p{margin:8px 0 0;font-size:13px;line-height:1.5;white-space:pre-wrap}
